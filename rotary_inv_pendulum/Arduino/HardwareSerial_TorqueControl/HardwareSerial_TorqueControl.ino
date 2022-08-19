@@ -62,7 +62,7 @@ void setup()
 
 void loop()
 {
-  recvWithEndMarker();
+  recvWithStartEndMarker();
   showNewNumber();
   
   motor.loopFOC();
@@ -73,7 +73,7 @@ void loop()
 }
 
 
-void recvWithEndMarker() {
+void recvWithStartEndMarker() {
     static boolean recvInProgress = false;
     static byte ndx = 0;
     uint8_t startMarker = 100;
